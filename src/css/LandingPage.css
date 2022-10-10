@@ -1,0 +1,17 @@
+.Logo{
+    width: 120px;
+    height: 90px;
+}
+
+.WaterTestingHeader{
+    height: 800px;
+    width: 100%;
+}
+
+.uk-navbar-container{
+    background-color: white !important;
+}
+
+.uk-navbar-right{
+    margin-right: 3%;
+}

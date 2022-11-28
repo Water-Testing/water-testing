@@ -1,7 +1,6 @@
 import React from 'react'
 
 const EditModal = () => {
-  const [openModal, setOpenModal] = useState(false);
   return (
     <div className='modalBackground'>
         <div className= 'modalContainer'>
@@ -11,7 +10,7 @@ const EditModal = () => {
         Edit Test 
         </div>
         <div>
-        <button onClick = {()=> {setOpenModal}}>Cancel</button>
+        <button></button>
         </div>
     </div>
     

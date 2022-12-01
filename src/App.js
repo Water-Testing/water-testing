@@ -20,7 +20,7 @@ export class App extends React.Component {
       <BrowserRouter>
         <Routes>
           <Route index element={<LandingPage />} />
-          <Route path="login" element={<LogPage />} />
+          <Route path="login" element={<ITDash />} />
           <Route path="register" element={<Registered />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="register/finaccreg" element={<Creditcardregistration/>}/>

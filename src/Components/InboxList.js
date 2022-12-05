@@ -11,9 +11,7 @@ const InboxList = () => {
   const [sendMessage, setSendMessage] = useState(false);
   const [emailOpen, setEmailOpen] = useState(false);
 
-  const newMessage = () => {
-  <div class = "text-4xl text-blue-900">HEY</div>
-  }
+
      const [emails, setEmails] = useState([
         {
           id: 1,
@@ -95,49 +93,33 @@ const InboxList = () => {
         }
       ]);
   return (
+    <div class = "container px-[0.1rem] p-1">
+      {/*header for searching and new message */}
+      <div class = 'inline-flex w-[47.7rem] pl-[5rem] ml-[2.1rem] h-[10rem] bg-white gap-10 font-semibold py-[1rem] rounded-t-lg border-b-2  dark:bg-gray-900'>
+  <button class = "flex mt-11 gap-3 dark:text-white"> <BsFillPlusCircleFill size={35}/> <span class = "mt-1.5">Compose</span></button>
     
-    <div class = " overflow-auto w-[55rem] h-[55rem] ml-[30px] bg-white rounded-md drop-shadow-md mb-[11rem] px-1">
-    
-  <div class = ' flex items-center bg-white gap-3 font-semibold py-[25px] px-[3.5rem] pb-10'>
-   <button onClick={()=> setSendMessage(true)} class = "flex flex-row gap-4"> <BsFillPlusCircleFill size={35}/> <span class = "py-1.5"> New message </span></button>
-    </div>
-    <div class = "px-[4rem] inline-flex">
+    <div class = " py-10  dark:fill-gray-900">
     <input
     type="search"
     name="Search"
-    class = "px-3 w-[32rem] border-[0.15rem] border-black rounded-md mb-[3rem] ml-[]"
+    class = "px-3 w-[30rem] border-2 mr-[20rem] border-black rounded-md dark:border-gray-200 dark:bg-gray-200 "
     placeholder= "Search..."/>
-    
-  <div class = "px-[2.4rem] font-semibold py-[0.30rem]">
-<Menu>
-  <Menu.Button class = 'flex flex-row'>Filter <RiArrowDropDownLine size={25}/></Menu.Button>
-  <Transition
-        enter="transition duration-100 ease-out"
-        enterFrom="transform scale-95 opacity-0"
-        enterTo="transform scale-100 opacity-100"
-        leave="transition duration-75 ease-out"
-        leaveFrom="transform scale-100 opacity-100"
-        leaveTo="transform scale-95 opacity-0"
-      >
-  <Menu.Items class = "flex flex-col h-[8rem] border-2 border-black items-left px-3 gap-4">
-    <Menu.Item>
-      <button>Date</button></Menu.Item>
-    <Menu.Item ><button>Unread</button></Menu.Item>
-    <Menu.Item><button>Files</button></Menu.Item>
-  </Menu.Items>
-  </Transition>
-  </Menu>
+    </div>
+
+  
 </div>
-</div>
-    <div class = "w-[10rem] px-[0.1rem] flex flex-col mb-[10rem] ">
+   {/*scrollable scetion for viewing emails */}
+    <div class = " overflow-auto scrollbar-hide w-[48rem] h-[55rem] ml-[1.89rem] bg-white mb-[11rem] px-1 dark:bg-gray-800">
+
+    <div class = "overflow-auto  px-[0.1rem] flex flex-col mb-[10rem] dark:bg-gray-900 ">
     { emails
-    .map((email, index) => (
+    .map((email) => (
        <button> <EmailCard key = {email.id} {...email}/></button>
     ))}   
     </div>
  
     </div>
-
+</div>
 )
 }
 

@@ -7,8 +7,9 @@ import {AiOutlineMail} from  'react-icons/ai';
 
 const InboxDetails = () => {
   return (
-<div class ='overflow-auto bg-[#FFFF] rounded-md mr-[16.5rem] w-[54rem] h-[55rem] mb-[11rem] drop-shadow-xl '>
-  <div class = " mt-[7rem] gap-y-[0.15rem] justify-center flex flex-col items-center ">
+<div class ='overflow-auto bg-[#FFFF] rounded-md mr-[17rem] w-[200rem] h-[64.5rem] mb-[11rem] drop-shadow-xl dark:bg-gray-900 dark:rounded-md'>
+  
+  <div class = " mt-[7rem] gap-y-[0.15rem] justify-center flex flex-col items-center dark:text-white ">
    <AiOutlineMail size = {200}/> 
    <p class = ' text-5xl py-16 font-bold'>View emails here</p>
 <div class = 'px-5 text-2xl font-semibold'>Click on an email to fully view it.</div>

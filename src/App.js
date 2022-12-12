@@ -4,7 +4,6 @@ import Samples from './Components/Samples';
 import Layout from './Components/shared/Layout';
 import Inbox from './Components/Inbox';
 import Settings from './Components/Settings';
-import SamplesMetal from './Components/SamplesMetal';
 import Logout from './Components/Logout';
 
 //routing set up for the dashboard, will contain a sidebar to access different pages
@@ -14,10 +13,8 @@ function App() {
    <Routes>
          <Route path = "/" element = {<Layout/>}> 
           <Route index element = {<Home/>}/>
-          <Route path = "samples" element = {<Samples/>}/>
           <Route path = "inbox" element = {<Inbox/>}/>
-          <Route path = "settings" element = {<Settings/>}/> 
-          <Route path = "samples-metal" element = {<SamplesMetal/>}/>       
+          <Route path = "samples" element = {<Samples/>}/>
           <Route path = "logout" element = {<Logout/>}/>
           
     </Route>

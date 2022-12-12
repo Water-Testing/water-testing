@@ -26,10 +26,10 @@ export default function Sidebar() {
                     
                     <div className="flex-1">
                         <ul className="pt-2 pb-4 space-y-9 font-semibold mr-10">
-                            <li className="rounded-sm">
+                            <li className="rounded-sm ">
                                 <a
                                     href="/"
-                                    className="flex items-center p-2 space-x-3 rounded-md hover:bg-slate-200 dark:hover:bg-gray-700"
+                                    className="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -48,10 +48,10 @@ export default function Sidebar() {
                                     <span class = "dark:text-white">Home</span>
                                 </a>
                             </li>
-                            <li className="rounded-sm">
+                            <li className="rounded-sm ">
                                 <a
                                     href="inbox"
-                                    className="flex items-center p-2 space-x-3 rounded-md hover:bg-slate-200 dark:hover:bg-gray-700"
+                                    className="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -70,46 +70,20 @@ export default function Sidebar() {
                                     <span class = "dark:text-white">Inbox</span>
                                 </a>
                             </li>
-                            <li className="rounded-sm">
+                            <li className="rounded-sm ">
                                 <a
                                     href="samples"
-                                    className="flex items-center p-2 space-x-3 rounded-md hover:bg-slate-200 dark:hover:bg-gray-700"
+                                    className="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700"
                                 >
                                     
                                     <span className='flex flex-1 gap-2.5 dark:text-white'> <BiTestTube class = "dark:stroke-white" size={25}/>Water Samples</span>
                                 </a>
                             </li>
-                            <li className="rounded-sm">
-                                <a
-                                    href="settings"
-                                    className="flex items-center p-2 space-x-3 rounded-md hover:bg-slate-200 dark:hover:bg-gray-700"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6 dark:stroke-white"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        strokeWidth={2}
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                                        />
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                                        />
-                                    </svg>
-                                    <span class = 'dark:text-white'>Settings</span>
-                                </a>
-                            </li>
+                          
                             <li className="rounded-sm">
                                 <a
                                     href="logout"
-                                    className="flex items-center p-2 space-x-3 rounded-md hover:bg-slate-200 dark:hover:bg-gray-700"
+                                    className="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +107,7 @@ export default function Sidebar() {
                             <label class="inline-flex relative items-center cursor-pointer">
   <input type="checkbox" value="" class="sr-only peer" onClick={handleThemeSwitch}/>
   <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-black rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
-  <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dark Mode</span>
+  <span class="ml-3 text-sm font-bold text-gray-900 dark:text-gray-300 ">Dark Mode</span>
 </label>
                             </li>
                         </ul>

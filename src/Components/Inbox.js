@@ -10,7 +10,7 @@ const Inbox = () => {
     <div class = "flex flex-row items-center gap-20">
     {/* contains the inboxlist and inboxDetails components*/}
  <InboxList/> 
-      <InboxDetails/> 
+    
     </div>
         </div>
   )

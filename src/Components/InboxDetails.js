@@ -15,7 +15,7 @@ const InboxDetails = () => {
 <div class = 'px-5 text-2xl font-semibold'>Click on an email to fully view it.</div>
             
   </div>
-<div class>  
+<div>  
 
       <div class = "flex flex-row gap-[3.0rem] px-[2.6rem] py-3 invisible">
      <button><BsReply size={30}/></button> 
@@ -28,7 +28,7 @@ const InboxDetails = () => {
        <p class = " text-sm mr-3 font-semibold">Reply All</p>
       </div>  
          <div className="px-9 text-xs text-light-500 whitespace-pre">
-           {}
+           
          </div>
       </div>
 

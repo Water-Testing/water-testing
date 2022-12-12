@@ -8,7 +8,6 @@ import {BsReply, BsReplyAll} from 'react-icons/bs'
 import { RiDeleteBin5Line } from 'react-icons/ri'
 import {Menu,Transition} from "@headlessui/react";
 import {RiArrowDropDownLine} from 'react-icons/ri'
-import ComposeModal from './ComposeModal'
 
 const InboxList = () => {
   // state hook for emails and modal

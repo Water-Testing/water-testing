@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
-import InboxDetails from "./InboxDetails"
 const EmailCard = (props) => {
   const [showEmail, setShowEmail] = useState(false)
   const{from, date, time, subject, body, hasAttachment, isSelected, onClick} = props;

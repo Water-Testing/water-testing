@@ -1,7 +1,6 @@
 import React from 'react'
-import InboxDetails from './InboxDetails'
 import InboxList from './InboxList'
-import NewMessageModal from './NewMessageModal'
+
 const Inbox = () => {
   return (
     <div class = "h-screen w-screen dark:bg-gray-800 ">

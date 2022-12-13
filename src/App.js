@@ -3,7 +3,6 @@ import Home from './Components/Home';
 import Samples from './Components/Samples';
 import Layout from './Components/shared/Layout';
 import Inbox from './Components/Inbox';
-import Settings from './Components/Settings';
 import Logout from './Components/Logout';
 
 //routing set up for the dashboard, will contain a sidebar to access different pages

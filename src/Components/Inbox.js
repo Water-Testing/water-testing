@@ -1,5 +1,6 @@
 import React from 'react'
 import InboxList from './InboxList'
+
 const Inbox = () => {
   return (
     <div class = "h-screen w-screen lg:w-[screen] dark:bg-gray-800  ">

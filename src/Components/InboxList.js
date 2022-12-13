@@ -155,7 +155,7 @@ function handleSubmit(event) {
   
 </div>
    {/*scrollable scetion for viewing emails */}
-    <div class = "  overflow-auto scrollbar-hide w-[48rem] h-[55rem] ml-[1.89rem] bg-white drop-shadow-lg mb-[11rem] px-1 dark:bg-gray-800">
+    <div class = "sm:h-screen  overflow-auto scrollbar-hide w-[48rem] h-[55rem] ml-[1.89rem] bg-white drop-shadow-lg mb-[11rem] px-1 dark:bg-gray-800">
 
     <div class = "overflow-auto  px-[0.1rem] flex flex-col mb-[10rem] dark:bg-gray-900 ">
     {emails.filter((email)=>{

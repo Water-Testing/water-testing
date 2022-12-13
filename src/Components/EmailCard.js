@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
-import InboxDetails from "./InboxDetails"
 const EmailCard = (props) => {
   const [showEmail, setShowEmail] = useState(false)
   const{from, date, time, subject, body, hasAttachment, isSelected, onClick} = props;
@@ -23,7 +22,7 @@ const EmailCard = (props) => {
   >  
 
 
-    <div onClick = {handleClickEmail} class = "h-[9.1rem] w-[43rem] hover:bg-slate-200 rounded-md active:bg-gray-100 dark:bg-gray-800  dark:hover:bg-gray-600 dark:active:bg-gray-500 flex border-2 border-gray-300 mt-10 pr-5">
+    <div onClick = {handleClickEmail} class = " md:1024px h-[9.1rem] w-[43rem] hover:bg-slate-200 rounded-md active:bg-gray-100 dark:bg-gray-800  dark:hover:bg-gray-600 dark:active:bg-gray-500 flex border-2 border-gray-300 mt-10 pr-5">
         <div class ="flex flex-col w-[600px] px-[1rem] ml-[1.4rem]">
         <div class =  "inline-flex w-full text-md font-semibold p-[1.1rem] justify-evenly mr-[10rem] mt-1">
           <span class = "dark:text-white">

@@ -1,10 +1,8 @@
 import React from 'react'
-import InboxDetails from './InboxDetails'
 import InboxList from './InboxList'
-import NewMessageModal from './NewMessageModal'
 const Inbox = () => {
   return (
-    <div class = "h-screen w-screen dark:bg-gray-800 ">
+    <div class = "h-screen w-screen lg:w-[screen] dark:bg-gray-800  ">
     <h1 class = "text-2xl font-semibold p-5 px-12 dark:text-white drop-shadow-xl"> Inbox </h1> 
 
     <div class = "flex flex-row items-center gap-20">

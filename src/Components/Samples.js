@@ -132,11 +132,11 @@ function handleSubmit(event) {
                 </div>
       <div class = "mt-[11rem] overflow-auto h-[50rem] ">  {/* table of sample tests*/}
       {/*creating the table*/}
-      <table class = "h-screen w-screen"> 
+      <table class = "h-screen w-screen lg:h-screen lg:w-screen"> 
         <thead class = " mt-[-2.50rem] fixed bg-gray-100 h-[3rem] border-b-2 border-gray-00 dark:bg-gray-800 dark:text-white dark:border-gray-500 w-screen">
-        <tr class = "text-left font-bold mb-[10rem] ">
-        <th  class = " px-[11.5rem] w-[35rem]  text-md font-semibold tracking-wide text-left "><button onClick={()=> onColumnClick("test")}>Testing Kit ID</button></th>
-        <th class = " px-[8rem] w-96 text-md font-semibold tracking-wide text-left"><button onClick={()=> onColumnClick("dateAdded")}>Date Added</button></th>
+        <tr class = "text-left font-bold mb-[10rem] lg:px-[15rem] ">
+        <th  class = " lg:px-[15rem] inline px-[11.5rem] w-[35rem]  text-md font-semibold tracking-wide text-left "><button onClick={()=> onColumnClick("test")}>Testing Kit ID</button></th>
+        <th class = " lg:px-[15rem] inline px-[8rem] w-96 text-md font-semibold tracking-wide text-left"><button onClick={()=> onColumnClick("dateAdded")}>Date Added</button></th>
          <th class = " px-[18.6rem] text-md font-semibold tracking-wide text-left"><button onClick={()=> onColumnClick("status")}>Status</button></th>
        </tr> 
        </thead>
@@ -147,9 +147,9 @@ function handleSubmit(event) {
         } ).map((item)=>(
           /* creating the rows which will contain an items info */
         <tr rowKey={item.id} onClick = {() => handleRowClick(item)} class = "bg-gray-50 h-[3.3rem] border-b-[0.1rem] hover:bg-gray-300  dark:bg-gray-700 dark:hover:bg-gray-600 overflow-auto">
-          <td class = "p-3 px-[12rem] text-black font-semibold dark:text-white ">{item.test}</td>
-          <td class = "p-3 ml-[10rem] text-black font-semibold dark:text-white">{item.dateAdded}</td>
-          <td class = "p-3 px-[20rem] text-black font-semibold dark:text-white">{item.status}</td>
+          <td class = "p-3 lg:px-[15rem] px-[12rem] text-black font-semibold dark:text-white ">{item.test}</td>
+          <td class = "p-3 lg:px-[2rem] ml-[10rem] text-black font-semibold dark:text-white">{item.dateAdded}</td>
+          <td class = "p-3 lg:px-[16rem] px-[20rem] text-black font-semibold dark:text-white">{item.status}</td>
         </tr>))}
         
         </tbody>  

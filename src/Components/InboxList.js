@@ -8,13 +8,22 @@ import {BsReply, BsReplyAll} from 'react-icons/bs'
 import { RiDeleteBin5Line } from 'react-icons/ri'
 import {Menu,Transition} from "@headlessui/react";
 import {RiArrowDropDownLine} from 'react-icons/ri'
-import ComposeModal from './ComposeModal'
+
 
 const InboxList = () => {
+
   // state hook for emails and modal
   const [sendMessage, setSendMessage] = useState(false);
   const [selectedEmail, setSelectedEmail] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
+
+  //state for searching emails
+  const [search, setSearch] = useState('');
+  console.log(search);
+ 
+  function handleSearch(event) {
+    setSearch(event.target.value);
+  }
 
 
 // functions to close and open modal
@@ -116,9 +125,9 @@ function handleSubmit(event) {
         },
         {
           id: 8,
-          from: "Annie Lynch",
-          subject: "Aliquam erat volutpat",
-          body: `Ut id dignissim purus. Donec suscipit tortor orci, eu accumsan lectus blandit id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vulputate ac urna ut elementum. Nunc eget metus vitae odio porta feugiat quis a mi. Vestibulum interdum maximus odio sed dignissim. Suspendisse ultricies auctor dignissim. Vivamus at lorem eget nisi ultricies scelerisque ut pellentesque erat.`,
+          from: "Steve Pickner",
+          subject: "Last week's tests",
+          body: `I was on leave because of a personal matter, so I will assist in getting back on track for last week's tests.`,
           hasAttachment: true,
           date: "11/12/2022",
           time: "2:12 PM",
@@ -126,15 +135,17 @@ function handleSubmit(event) {
         }
       ]);
   return (
-    <div class = "container flex flex-row">
+    <div class = "container flex flex-row ">
       
     <div class = "container px-[0.1rem] p-1">
       {/*header for searching and new message */}
       <div class = 'drop-shadow-lg inline-flex w-[47.7rem] pl-[5rem] ml-[2.1rem] h-[10rem] bg-white gap-10 font-semibold py-[1rem] rounded-t-lg border-b-2  dark:bg-gray-900'>
+
   <button class = "flex mt-11 gap-3 dark:text-white"> <BsFillPlusCircleFill size={35}/> <span class = "mt-1.5">Compose</span></button>
     
     <div class = " py-10  dark:fill-gray-900">
     <input
+     onChange={handleSearch}
     type="search"
     name="Search"
     class = "px-3 w-[30rem] border-2 mr-[20rem] border-black rounded-md dark:border-gray-200 dark:bg-gray-200 "
@@ -144,11 +155,13 @@ function handleSubmit(event) {
   
 </div>
    {/*scrollable scetion for viewing emails */}
-    <div class = " overflow-auto scrollbar-hide w-[48rem] h-[55rem] ml-[1.89rem] bg-white drop-shadow-lg mb-[11rem] px-1 dark:bg-gray-800">
+    <div class = "  overflow-auto scrollbar-hide w-[48rem] h-[55rem] ml-[1.89rem] bg-white drop-shadow-lg mb-[11rem] px-1 dark:bg-gray-800">
 
     <div class = "overflow-auto  px-[0.1rem] flex flex-col mb-[10rem] dark:bg-gray-900 ">
-    { emails
-    .map((email) => (
+    {emails.filter((email)=>{
+          /* search function */ 
+          return search.toLowerCase() === '' ? email : email.from.toLowerCase().includes(search.toLowerCase()) || email.date.toLowerCase().includes(search.toLowerCase()) || email.subject.toLowerCase().includes(search.toLowerCase()) || email.time.toLowerCase().includes(search.toLowerCase());
+        }).map((email)=>(
        <button onClick = {() => handleRowClick(email)}> <EmailCard key = {email.id} {...email}/></button>
     ))}   
     </div>
@@ -158,8 +171,8 @@ function handleSubmit(event) {
    </div>
 
    {/*Div for viewing the contents of the email*/}
-  <div class = " mb-[30rem] mr-[-20rem] w-[80rem] rounded-lg bg-white h-screen text-3xl drop-shadow-lg dark:bg-gray-900">
-   <div class = " mt-[7rem] gap-y-[0.15rem] justify-center flex flex-col items-center dark:text-white ">
+  <div class = "sm:items-center sm: mb-[30rem]  ml-[3rem]  rounded-lg bg-white h-screen text-3xl drop-shadow-lg dark:bg-gray-900">
+   <div class = " mt-[7rem] gap-y-[0.15rem] justify-center w-[49rem] flex flex-col items-center dark:text-white ">
    <AiOutlineMail size = {200}/> 
    <p class = ' text-5xl py-16 font-bold'>View emails here</p>
 <div class = 'px-5 text-2xl font-semibold'>Click on an email to fully view it.</div>
@@ -169,17 +182,17 @@ function handleSubmit(event) {
     {selectedEmail && modalVisible && (
    
    <div class = "fixed ml-[64.5rem] drop-shadow-xl mt-[9rem]   inset-0 bg-opacity-40  flex justify-center items-center ">
-    <div class = " bg-white p-2 rounded w-[50rem] h-screen dark:bg-gray-900 dark:text-white">
+    <div class = " bg-white p-2 rounded w-[51rem] h-screen dark:bg-gray-900 mr-[1.3rem]  dark:text-white">
 <button onClick={handleCloseModal} class = " ml-[71rem] w-[1rem] py-[1rem] dark:text-white" ><RiCloseFill  size={30}/></button>
-<div class = "flex flex-row gap-[3.0rem] px-[2.6rem] ml-[0.5rem] py-3">
+<div class = "flex flex-row gap-[3.0rem] mt-[-3rem] px-[2.6rem] ml-[0.5rem] py-3">
      <button><BsReply class = ""  size={25}/></button> 
      <button><RiDeleteBin5Line class = "" size = {25}/></button> 
      <button> <BsReplyAll class = "ml-[0.8rem]" size = {25}/></button> 
       </div>
-      <div class = "flex row gap-8 px-10 mb-[rem]">
+      <div class = "flex row gap-8 px-10 ">
        <p class = " text-sm font-semibold ml-[0.2rem]">Reply</p>
-       <p class = " text-sm px-1 font-semibold">Delete</p>
-       <p class = " text-sm  font-semibold">Reply All</p>
+      <p class = " text-sm font-semibold">Reply All</p>
+         <p class = " text-sm font-semibold">Delete</p>
       </div>
 <form onSubmit={handleSubmit} class = " mt-10 text- flex justiy-center items-center flex-col font-thin  text-md leading-relaxed">
   <ul>

@@ -8,6 +8,7 @@ import {BsReply, BsReplyAll} from 'react-icons/bs'
 import { RiDeleteBin5Line } from 'react-icons/ri'
 import {Menu,Transition} from "@headlessui/react";
 import {RiArrowDropDownLine} from 'react-icons/ri'
+import { data } from 'autoprefixer'
 
 
 const InboxList = () => {
@@ -67,7 +68,7 @@ function handleSubmit(event) {
         },
         {
           id: 2,
-          from: "Dribbble Team",
+          from: "CMO Kerry Jonson",
           subject: "How are you getting on?",
           body: `Etiam vel tincidunt lorem, vitae consequat sem. Aenean dictum nisi quis sollicitudin pharetra.Ut id dignissim purus. Donec suscipit tortor orci, eu accumsan lectus blandit id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vulputate ac urna ut elementum. Nunc eget metus vitae odio porta feugiat quis a mi. Vestibulum interdum maximus odio sed dignissim. Suspendisse ultricies auctor dignissim. Vivamus at lorem eget nisi ultricies scelerisque ut pellentesque erat.`,
           hasAttachment: true,
@@ -90,8 +91,8 @@ function handleSubmit(event) {
         },
         {
           id: 4,
-          from: "Annie Lynch",
-          subject: "Aliquam erat volutpat",
+          from: "David Woods",
+          subject: "Water test for user 215",
           body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in velit erat. Morbi sit amet eros maximus, dictum tortor in, placerat ante. Nunc fringilla iaculis nulla eu finibus. Duis quis molestie neque. Cras quis scelerisque diam. Donec consectetur mauris at turpis ultrices, sit amet fringilla eros auctor. Phasellus ac metus tempus, volutpat dolor non, consectetur enim. Fusce porttitor at neque non tincidunt. Integer tincidunt tempus porttitor. Etiam vel tincidunt lorem, vitae consequat sem. Aenean dictum nisi quis sollicitudin pharetra.
         
               Ut id dignissim purus. Donec suscipit tortor orci, eu accumsan lectus blandit id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vulputate ac urna ut elementum. Nunc eget metus vitae odio porta feugiat quis a mi. Vestibulum interdum maximus odio sed dignissim. Suspendisse ultricies auctor dignissim. Vivamus at lorem eget nisi ultricies scelerisque ut pellentesque erat.`,
@@ -102,8 +103,8 @@ function handleSubmit(event) {
         },
         {
           id: 5,
-          from: "Annie Lynch",
-          subject: "Aliquam erat volutpat",
+          from: "Bob Duncan",
+          subject: "Heyoo!",
           body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in velit erat. Morbi sit amet eros maximus, dictum tortor in, placerat ante. Nunc fringilla iaculis nulla eu finibus. Duis quis molestie neque. Cras quis scelerisque diam. Donec consectetur mauris at turpis ultrices, sit amet fringilla eros auctor. Phasellus ac metus tempus, volutpat dolor non, consectetur enim. Fusce porttitor at neque non tincidunt. Integer tincidunt tempus porttitor. Etiam vel tincidunt lorem, vitae consequat sem. Aenean dictum nisi quis sollicitudin pharetra.
         
               Ut id dignissim purus. Donec suscipit tortor orci, eu accumsan lectus blandit id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vulputate ac urna ut elementum. Nunc eget metus vitae odio porta feugiat quis a mi. Vestibulum interdum maximus odio sed dignissim. Suspendisse ultricies auctor dignissim. Vivamus at lorem eget nisi ultricies scelerisque ut pellentesque erat.`,
@@ -115,7 +116,7 @@ function handleSubmit(event) {
 
         {
           id: 6,
-          from: "Annie Lynch",
+          from: "Adrian Smith",
           subject: "Aliquam erat volutpat",
           body: `Ut id dignissim purus. Donec suscipit tortor orci, eu accumsan lectus blandit id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed vulputate ac urna ut elementum. Nunc eget metus vitae odio porta feugiat quis a mi. Vestibulum interdum maximus odio sed dignissim. Suspendisse ultricies auctor dignissim. Vivamus at lorem eget nisi ultricies scelerisque ut pellentesque erat.`,
           hasAttachment: true,
@@ -134,6 +135,7 @@ function handleSubmit(event) {
           isSelected: false,
         }
       ]);
+  
   return (
     <div class = "container flex flex-row ">
       
